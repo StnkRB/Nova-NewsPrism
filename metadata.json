@@ -1,5 +1,5 @@
 {
-  "name": "Prism News",
-  "description": "A multi-agent news interpreter that extracts stories and runs them through three parallel analysts and one final synthesizer.",
+  "name": "NewsPrism",
+  "description": "An immersive live debate platform where three AI agents with distinct political inclinations analyze and debate news articles in real-time.",
   "requestFramePermissions": ["microphone"]
 }
