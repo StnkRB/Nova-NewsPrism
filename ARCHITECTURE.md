@@ -10,7 +10,7 @@ The following diagram illustrates the end-to-end lifecycle of a news deconstruct
 sequenceDiagram
     participant U as User (UI)
     participant S as Express Server
-    participant G as Gemini 3 Flash API
+    participant G as Amazon Nova 2 API
     
     U->>S: POST /api/scrape (URL)
     S->>S: Fetch HTML (Axios)
@@ -64,7 +64,7 @@ This is the core of the Prism framework. We run three agents simultaneously usin
 | **The Jurist** | Forensic Fact-Checker | Verifiable claims, missing context, logical fallacies, neutrality scoring. |
 
 #### Stage C: Multimodal Asset Generation
-- **Visual Metaphors**: Using `gemini-2.5-flash-image`, the system generates high-contrast editorial illustrations for each analyst's perspective. This provides a visual anchor for the ideological lens.
+- **Visual Metaphors**: Using **Amazon Nova 2 Image**, the system generates high-contrast editorial illustrations for each analyst's perspective. This provides a visual anchor for the ideological lens.
 - **Prompting**: Prompts are dynamically generated based on the neutral brief to ensure visual consistency with the narrative.
 
 #### Stage D: The Synthesis Layer (Orchestrator)
@@ -73,7 +73,7 @@ This is the core of the Prism framework. We run three agents simultaneously usin
 - **Metric**: It calculates the **Polarization Index** by measuring the distance between the two ideological interpretations.
 
 #### Stage E: Audio Briefing (TTS)
-- **Technology**: `gemini-2.5-flash-preview-tts`.
+- **Technology**: **Amazon Nova 2 TTS**.
 - **Output**: A professional, authoritative broadcast audio summary of the final synthesis. This transforms the static report into an immersive, "live" news experience.
 
 ---
@@ -114,20 +114,20 @@ graph TD
 
 Prism News is designed for high-stakes news deconstruction, where transparency is as important as the analysis itself. We provide three layers of observability:
 
-### 1. The In-App "Cloud Console"
-A dedicated overlay that mirrors the Google Cloud Console. It provides a human-readable view of the underlying infrastructure, including:
-- **Service Status**: Live Cloud Run health checks.
+### 1. The In-App "AWS Console"
+A dedicated overlay that mirrors the AWS Management Console. It provides a human-readable view of the underlying infrastructure, including:
+- **Service Status**: Live AWS App Runner health checks.
 - **Resource Allocation**: CPU/Memory limits.
-- **Security Metadata**: Confirmation of Secret Manager usage for API key protection.
+- **Security Metadata**: Confirmation of AWS Secrets Manager usage for API key protection.
 
 ### 2. The Agentic Audit Trail (UI)
 A terminal-style log that streams the "inner monologue" of the AI agents. This allows users to see the exact sequence of events, from scraping to synthesis, ensuring no hidden steps occur.
 
 ### 3. The Forensic Console (Chrome DevTools)
 For technical judges, the application outputs structured metadata to the browser's console. By opening **F12**, judges can see:
-- `[GCP-PROOF]`: Deployment environment verification.
-- `[GCP-PROOF]`: API connectivity status.
-- `[GCP-PROOF]`: Agentic state transitions.
+- `[AWS-PROOF]`: Deployment environment verification.
+- `[AWS-PROOF]`: API connectivity status.
+- `[AWS-PROOF]`: Agentic state transitions.
 
 ---
 
@@ -181,12 +181,12 @@ graph LR
 
 ## 🔒 Security & Performance
 
-- **Direct API Integration**: By calling Gemini from the frontend, we reduce server load and allow for easier scaling of the "Intelligence Log" UI.
+- **Direct API Integration**: By calling Amazon Nova 2 from the frontend, we reduce server load and allow for easier scaling of the "Intelligence Log" UI.
 - **Latency Optimization**: Parallelizing the analyst layer reduces the total processing time by ~60%.
 - **Anti-Hallucination**: Every agent is strictly bound to the "Source Brief" provided by the Extraction Agent. If a detail isn't in the brief, the agent is instructed not to invent it.
 
 ## 🛠️ Environment Configuration
 
-- `GEMINI_API_KEY`: Required for all AI operations.
+- `AWS_ACCESS_KEY_ID`: Required for all AI operations.
 - `PORT`: Fixed at 3000 for the Express server.
 - `NODE_ENV`: Used to toggle between Vite middleware and static production serving.

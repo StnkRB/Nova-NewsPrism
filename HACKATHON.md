@@ -1,4 +1,4 @@
-# Building NewsPrism: Redefining News with Amazon Nova
+# Building NewsPrism: Redefining News with Amazon Nova 2
 
 *This piece of content was created for the purposes of entering the Amazon Nova Hackathon.*
 
@@ -16,12 +16,12 @@ NewsPrism doesn't just summarize an article; it analyzes it through the eyes of 
 
 By presenting these conflicting viewpoints, we empower users to form their own conclusions rather than being fed a single narrative.
 
-### The Engine: Amazon Bedrock & Amazon Nova
+### The Engine: Amazon Bedrock & Amazon Nova 2
 The heart of NewsPrism is **Amazon Bedrock**. We utilized a multi-model approach to balance speed and depth:
 
-1.  **Deep Analysis with Amazon Nova Pro**: When a user submits a URL, we use Amazon Nova Pro to perform a comprehensive analysis of the text. It identifies core arguments, detects bias, and generates the detailed "perspectives" for our AI agents.
-2.  **Real-Time Interaction with Amazon Nova Lite**: This is the "magic" of the project. In our **Live Debate** mode, we use Amazon Nova Lite to facilitate a real-time discussion between our agents. 
-    -   **Low Latency**: Nova Lite allows for near-instantaneous responses.
+1.  **Deep Analysis with Amazon Nova 2 Pro**: When a user submits a URL, we use Amazon Nova 2 Pro to perform a comprehensive analysis of the text. It identifies core arguments, detects bias, and generates the detailed "perspectives" for our AI agents.
+2.  **Real-Time Interaction with Amazon Nova 2 Lite**: This is the "magic" of the project. In our **Live Debate** mode, we use Amazon Nova 2 Lite to facilitate a real-time discussion between our agents. 
+    -   **Low Latency**: Nova 2 Lite allows for near-instantaneous responses.
     -   **Agentic Workflow**: We implemented custom system instructions to ensure agents respect a structured debate format, calling on each other and waiting for user input.
 
 ### The Infrastructure: AWS
@@ -36,7 +36,7 @@ On the frontend, we wanted a "Technical Dashboard" aesthetic—precise, clean, a
 -   **Framer Motion**: Powering the smooth transitions and the "Speaking" animations for our AI agents.
 
 ### Conclusion: The Future of Informed Citizens
-NewsPrism is more than just a tool; it’s an experiment in using AI to promote critical thinking. By combining the reasoning power of **Amazon Nova Pro** with the speed of **Amazon Nova Lite**, we’ve created a platform that doesn't just tell you the news—it talks it through with you.
+NewsPrism is more than just a tool; it’s an experiment in using AI to promote critical thinking. By combining the reasoning power of **Amazon Nova 2 Pro** with the speed of **Amazon Nova 2 Lite**, we’ve created a platform that doesn't just tell you the news—it talks it through with you.
 
 ---
 

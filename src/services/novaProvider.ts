@@ -17,7 +17,7 @@ export class NovaProvider implements AIService {
   }
 
   async analyzeUrl(url: string): Promise<AnalysisResult> {
-    // For Nova, we first need to fetch the content since it doesn't have a native urlContext tool like Gemini.
+    // For Nova, we first need to fetch the content since it doesn't have a native urlContext tool like Amazon Nova 2.
     // We'll use a server-side proxy for this.
     const fetchResponse = await fetch(`/api/fetch-url?url=${encodeURIComponent(url)}`);
     const { content } = await fetchResponse.json();
@@ -37,7 +37,7 @@ export class NovaProvider implements AIService {
     `;
 
     const command = new ConverseCommand({
-      modelId: "amazon.nova-pro-v1:0",
+      modelId: "amazon.nova-2-pro-v1:0",
       messages: [{ role: "user", content: [{ text: prompt }] }],
       inferenceConfig: {
         maxTokens: 2000,
@@ -85,7 +85,7 @@ export class NovaProvider implements AIService {
       `;
 
     const command = new ConverseStreamCommand({
-      modelId: "amazon.nova-lite-v1:0",
+      modelId: "amazon.nova-2-lite-v1:0",
       system: [{ text: systemInstruction }],
       messages: [{ role: "user", content: [{ text: "Start the debate." }] }],
       inferenceConfig: {

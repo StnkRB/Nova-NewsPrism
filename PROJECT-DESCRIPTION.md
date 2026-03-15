@@ -20,7 +20,7 @@ The **user acts as a Jury**, able to ask any agent for their specific perspectiv
 ## How we built it
 - **Frontend**: React 19, Tailwind CSS 4, Motion (Framer Motion), Lucide React.
 - **Backend**: Express.js (Node.js), Axios, Cheerio (for web scraping).
-- **AI Engine**: **Amazon Bedrock** featuring **Amazon Nova Pro** (for complex reasoning) and **Amazon Nova Lite** (for rapid-fire debate responses).
+- **AI Engine**: **Amazon Bedrock** featuring **Amazon Nova 2 Pro** (for complex reasoning) and **Amazon Nova 2 Lite** (for rapid-fire debate responses).
 - **Infrastructure**: **Amazon Web Services (AWS)**.
 
 ### The Infrastructure: AWS
@@ -28,16 +28,16 @@ To ensure NewsPrism is production-ready and scalable, we leveraged the **AWS** e
 
 - **AWS App Runner**: The entire application is containerized and deployed via App Runner. This allows us to scale automatically based on traffic while keeping latency low for our global users.
 - **AWS Secrets Manager**: We securely handle our Amazon Bedrock credentials and other sensitive environment variables, ensuring our integration is both powerful and secure.
-- **Amazon Bedrock**: Used to orchestrate the agentic workflow, utilizing the high-speed inference of the **Amazon Nova** model family to maintain a fluid, real-time debate experience.
+- **Amazon Bedrock**: Used to orchestrate the agentic workflow, utilizing the high-speed inference of the **Amazon Nova 2** model family to maintain a fluid, real-time debate experience.
 
 ## Challenges we ran into
-Transitioning our agentic workflows to the **Amazon Nova** architecture required significant prompt engineering. Adapting to Nova's specific reasoning patterns was an exciting learning curve, but ultimately resulted in much faster response times for our live debate feature.
+Transitioning our agentic workflows to the **Amazon Nova 2** architecture required significant prompt engineering. Adapting to Nova 2's specific reasoning patterns was an exciting learning curve, but ultimately resulted in much faster response times for our live debate feature.
 
 ## Accomplishments that we're proud of
-We tested the agents with highly biased news links from recent global escalations and political topics. We were amazed at how well the **Amazon Nova** models maintained their grounded personas, presenting viewpoints solely based on the facts presented in the article (grounding) without hallucinating external biases.
+We tested the agents with highly biased news links from recent global escalations and political topics. We were amazed at how well the **Amazon Nova 2** models maintained their grounded personas, presenting viewpoints solely based on the facts presented in the article (grounding) without hallucinating external biases.
 
 ## What we learned
-Agents can be more consistent than humans in conveying a specific, grounded perspective. The beauty of using **Amazon Nova** is the ability to define a persona that remains steadfast and logical, providing a far more reliable "prism" for analysis than a human counterpart might.
+Agents can be more consistent than humans in conveying a specific, grounded perspective. The beauty of using **Amazon Nova 2** is the ability to define a persona that remains steadfast and logical, providing a far more reliable "prism" for analysis than a human counterpart might.
 
 ## What's next for NewsPrism
 We want to realize and develop this app for a global audience. We have ideas to extend this agentic flow further—perhaps incorporating real-time social media sentiment analysis via AWS Lambda—to provide even deeper context to the "Shared Reality" our agents seek to find.

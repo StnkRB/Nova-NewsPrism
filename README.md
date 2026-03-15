@@ -20,7 +20,7 @@ The **user acts as a Jury**, able to ask any agent for their specific perspectiv
 ## How we built it
 - **Frontend**: React 19, Tailwind CSS 4, Motion (Framer Motion), Lucide React.
 - **Backend**: Express.js (Node.js), Axios, Cheerio (for web scraping).
-- **AI Engine**: **Amazon Bedrock** featuring **Amazon Nova Pro** (for complex reasoning) and **Amazon Nova Lite** (for rapid-fire debate responses).
+- **AI Engine**: **Amazon Bedrock** featuring **Amazon Nova 2 Pro** (for complex reasoning) and **Amazon Nova 2 Lite** (for rapid-fire debate responses).
 - **Infrastructure**: **Amazon Web Services (AWS)**.
 
 ### The Infrastructure: AWS
@@ -28,7 +28,7 @@ To ensure NewsPrism is production-ready and scalable, we leveraged the **AWS** e
 
 - **AWS App Runner**: The entire application is containerized and deployed via App Runner. This allows us to scale automatically based on traffic while keeping latency low for our global users.
 - **AWS Secrets Manager**: We securely handle our Amazon Bedrock credentials and other sensitive environment variables, ensuring our integration is both powerful and secure.
-- **Amazon Bedrock**: Used to orchestrate the agentic workflow, utilizing the high-speed inference of the **Amazon Nova** model family to maintain a fluid, real-time debate experience.
+- **Amazon Bedrock**: Used to orchestrate the agentic workflow, utilizing the high-speed inference of the **Amazon Nova 2** model family to maintain a fluid, real-time debate experience.
 
 ## Getting Started
 
